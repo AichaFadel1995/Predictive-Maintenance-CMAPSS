@@ -69,19 +69,6 @@ Only the **CNN–GRU (2 layers)** is visualized, since it represents the final s
 
 ## 3. Repository Structure
 
-├── data/
-│   └── FD001/
-├── docs/
-├── images/
-│   ├── cnn_gru_2layers_train_val_loss.png
-│   ├── cnn_gru_2layers_prediction_plot.png
-│   └── cnn_gru_best_model_true_vs_pred.png
-├── notebooks/
-│   ├── Engine_Preprocessing Pipeline-GRU-G.ipynb
-│   ├── Engine_project_EDA-G.ipynb
-│   └── Engine_project_Modlisation_GRU_Gui.ipynb
-└── README.md
-
 ---
 
 ## 4. Dataset
