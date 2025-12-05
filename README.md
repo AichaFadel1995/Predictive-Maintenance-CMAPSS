@@ -1,45 +1,39 @@
 # Predictive-Maintenance-CMAPSS
 
-Remaining Useful Life (RUL) estimation using a Hybrid CNN–GRU deep learning model trained on the NASA CMAPSS FD001 turbofan engine dataset.
+Remaining Useful Life (RUL) prediction using the **best-performing Hybrid CNN–GRU model** on the NASA CMAPSS FD001 turbofan dataset.
 
 ---
 
-## Overview
-This project applies deep learning techniques to predict the Remaining Useful Life (RUL) of aerospace engines using multivariate time-series sensor data.  
-Several neural network architectures were explored, and a hybrid CNN–GRU–GRU model was selected as the final solution due to its strong predictive accuracy and stability.
+## Best Model: Hybrid CNN–GRU (2 Layers)
 
-A complete technical explanation (preprocessing, architecture comparison, and full analysis) is available in the `docs/` directory.
+This architecture achieved the best balance between accuracy, stability, and generalization.
 
----
-
-## Final Model Architecture
-- **Input:** 30-cycle window × 14 features  
-- **Conv1D:** 32 filters + MaxPooling  
-- **GRU:** 64 units  
-- **GRU:** 32 units  
-- **Dense:** 1 (ReLU activation)  
-- **Optimizer:** Adam (lr = 0.001)  
-- **Loss:** Mean Squared Error  
+### **Performance Metrics**
+| Metric       | Value   |
+|--------------|---------|
+| **RMSE**     | 12.97   |
+| **R² Score** | 0.9026  |
+| **NASA Score** | 249.93 |
 
 ---
 
-## Results (FD001)
-| Metric        | Score   |
-|---------------|---------|
-| **RMSE**      | 12.97   |
-| **R² Score**  | 0.9026  |
-| **NASA Score**| 249.93  |
+## 1. Training vs Validation Loss
+
+![Training vs Validation Loss](images/cnn_gru_2layers_train_val_loss.png)
 
 ---
 
-## Learning Curve  
-![Training vs Validation Loss](images/cnn_gru_best_model_train_val_loss.png)
+## 2. Prediction Tracking Across Engines
+
+![Prediction Plot](images/cnn_gru_2layers_prediction_plot.png)
 
 ---
 
-## True vs Predicted RUL  
+## 3. True vs Predicted RUL (Test Set)
+
 ![True vs Predicted RUL](images/cnn_gru_best_model_true_vs_pred.png)
 
 ---
 
 ## Repository Structure
+
